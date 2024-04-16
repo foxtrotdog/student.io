@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-04-16T12:32:52.833Z",
+    "end": "2024-04-16T12:33:23.630Z",
+    "duration": 30797,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d13f3df2-febc-44ec-a500-1b9073d79221",
+      "title": "",
+      "fullFile": "cypress\\e2e\\_CIVFunding\\General\\UserAccount\\UpdateCivStudentInformation.cy.ts",
+      "file": "cypress\\e2e\\_CIVFunding\\General\\UserAccount\\UpdateCivStudentInformation.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "66339a4c-4929-4745-bd51-d8e4566076b5",
+          "title": "Updates their information",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "I can log in, select my profile",
+              "fullTitle": "Updates their information I can log in, select my profile",
+              "timedOut": null,
+              "duration": 10479,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('JJ', 'Civ01');\ncy.wait(2000);\ncy.visit('/account/profile').wait(2000);",
+              "err": {},
+              "uuid": "de3fb9cf-4e23-4ef6-b8a1-39a7a8760a5a",
+              "parentUUID": "66339a4c-4929-4745-bd51-d8e4566076b5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Civ Student can update their information",
+              "fullTitle": "Updates their information Civ Student can update their information",
+              "timedOut": null,
+              "duration": 20241,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var todayDate = moment__WEBPACK_IMPORTED_MODULE_0__().format(\"MDDYYYY\");\ncy.getInputControl('userPersonalEmail').click().clear().type(todayDate + 'jjciv01@test.net');\ncy.contains('button', 'Update ').click().wait(2000);\ncy.getInputControl('userWorkPhone').click().clear().type('9876543216');\ncy.contains('button', 'Update ').click().wait(2000);\ncy.getInputControl('userMobilePhone').click().clear().type('6123785554');\ncy.contains('button', 'Update ').click().wait(2000);\ncy.getInputControl('street1').click().clear().type(todayDate + '101 test st');\ncy.contains('button', 'Update ').click().wait(2000);\ncy.getInputControl('street2').click().clear().type('apt' + todayDate);\ncy.contains('button', 'Update ').click().wait(2000);\ncy.getInputControl('city').click().clear().type('Minneapolis');\ncy.contains('button', 'Update ').click().wait(2000);\ncy.getMatSelectControl('stateId').click().type('{downarrow}{downarrow}{enter}');\ncy.contains('button', 'Update ').click().wait(2000);\ncy.getInputControl('zip').click().clear().type('55401');\ncy.contains('button', 'Update ').click().wait(2000);",
+              "err": {},
+              "uuid": "02ea3bde-808c-4688-af85-3a924e6f2ca0",
+              "parentUUID": "66339a4c-4929-4745-bd51-d8e4566076b5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "de3fb9cf-4e23-4ef6-b8a1-39a7a8760a5a",
+            "02ea3bde-808c-4688-af85-3a924e6f2ca0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 30720,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

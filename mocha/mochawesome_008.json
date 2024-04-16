@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-04-16T12:31:54.744Z",
+    "end": "2024-04-16T12:32:00.612Z",
+    "duration": 5868,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "58de4dd9-7d02-48e7-bd4f-da8325016275",
+      "title": "",
+      "fullFile": "cypress\\e2e\\_CIVFunding\\General\\civ-login-test.cy.ts",
+      "file": "cypress\\e2e\\_CIVFunding\\General\\civ-login-test.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "34e76c46-d9fe-4b5e-935c-02d6b9762b2b",
+          "title": "Civilian Student can login and see Dashboard",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "I can access site",
+              "fullTitle": "Civilian Student can login and see Dashboard I can access site",
+              "timedOut": null,
+              "duration": 5827,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('Andrew', 'Civ01');",
+              "err": {},
+              "uuid": "3e9ae7df-dbed-4aac-b516-d6fe64281d31",
+              "parentUUID": "34e76c46-d9fe-4b5e-935c-02d6b9762b2b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3e9ae7df-dbed-4aac-b516-d6fe64281d31"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5827,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

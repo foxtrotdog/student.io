@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-04-16T12:36:43.446Z",
+    "end": "2024-04-16T12:36:56.642Z",
+    "duration": 13196,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7a567564-fbb9-4aba-bc6a-5a68c1198fab",
+      "title": "",
+      "fullFile": "cypress\\e2e\\_TAFunding\\General\\Messages\\send-message.cy.ts",
+      "file": "cypress\\e2e\\_TAFunding\\General\\Messages\\send-message.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "727f7f45-54a3-4e22-aea3-f722c9986249",
+          "title": "Student creates and sends message",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "I can view messages",
+              "fullTitle": "Student creates and sends message I can view messages",
+              "timedOut": null,
+              "duration": 11301,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('Cypress', 'Student');\ncy.wait(2000);\ncy.contains('Messages').click();\ncy.wait(2000);",
+              "err": {},
+              "uuid": "a31df343-9f5f-4fbd-8cdc-e335347944b5",
+              "parentUUID": "727f7f45-54a3-4e22-aea3-f722c9986249",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "I can edit message",
+              "fullTitle": "Student creates and sends message I can edit message",
+              "timedOut": null,
+              "duration": 1657,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Create Message').click();\n// category\ncy.get('mat-select[formcontrolname=\"messageThreadSubCategory\"]').click();\ncy.get('mat-option').contains('Credentialing Assistance').click();\n// subject\ncy.get('input[formcontrolname=subject]').click().type('Test');\n// message\ncy.get('body').click(90, 451);\ncy.get('.k-iframe').then(($iframe) => {\n    const $body = $iframe.contents().find('body');\n    cy.wrap($body)\n        .find('.ProseMirror')\n        .type('Test message regarding credentials');\n});",
+              "err": {},
+              "uuid": "0bbbf92a-0828-43db-ab44-5b81819ba2b6",
+              "parentUUID": "727f7f45-54a3-4e22-aea3-f722c9986249",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "I can send message",
+              "fullTitle": "Student creates and sends message I can send message",
+              "timedOut": null,
+              "duration": 129,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Send').click();",
+              "err": {},
+              "uuid": "3ed5333f-7f8f-4430-8d0e-74687f9457dc",
+              "parentUUID": "727f7f45-54a3-4e22-aea3-f722c9986249",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a31df343-9f5f-4fbd-8cdc-e335347944b5",
+            "0bbbf92a-0828-43db-ab44-5b81819ba2b6",
+            "3ed5333f-7f8f-4430-8d0e-74687f9457dc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13087,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

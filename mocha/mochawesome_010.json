@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-04-16T12:32:21.431Z",
+    "end": "2024-04-16T12:32:28.800Z",
+    "duration": 7369,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1120f0d2-088c-4230-9dcd-359f064d7180",
+      "title": "",
+      "fullFile": "cypress\\e2e\\_TAFunding\\General\\login-test.cy.ts",
+      "file": "cypress\\e2e\\_TAFunding\\General\\login-test.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6ec8678a-27be-40cc-941d-8154b066d26f",
+          "title": "Student can login and see Dashboard",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "I can access site",
+              "fullTitle": "Student can login and see Dashboard I can access site",
+              "timedOut": null,
+              "duration": 7318,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let loginUrl = 'https://dev.bamtech.net/student/account/login-openid#id_token=eyJraWQiOiJhOWZhNzI0NDBhYmEwYjNkOTE2MzZlNzAwZGUwMjQ2MzlhZjk1ZjRmODZhYjEzZjQ3YWM5NWE3NDRjY2IzN2I4IiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJodHRwczovL2ZlZGVyYXRpb24uZWFtcy5hcm15Lm1pbC9vaWRjL3d3dy5hcm15aWduaXRlZC5hcm15Lm1pbCIsImVkaXBpIjoiMTQ1OTMwMDk0MSIsIm1haWwiOiJrdXJ0LmRvd3N3ZWxsLjEuY3RyQHVzLmFmLm1pbCIsImdpdmVubmFtZSI6Ikt1cnQiLCJzdWIiOiJrdXJ0LnIuZG93c3dlbGwuY3RyIiwiYXVkIjoid3d3LmFybXlpZ25pdGVkLmFybXkubWlsIiwiZXhwIjoxNjY3OTUxMzU0LCJpYXQiOjE2Njc5MzY5NTQsIm5vbmNlIjpudWxsfQ.KHMct1k0ZBrYm7ERbcz5FIaqV6LLfDImCmrhTcQBE7FZD-8dJTkwnAWTHrd8_gKHkiMzKyXjWja-ZBnsGOvDm2SAOho4wnJS2LB0io5SNuVXY8FeAv6UORKZFWCR2zdZxdSWpuRkuq_ARQNGVsZMwhlhrI5fsJyT1ukQl5izfsgWJJAsyE0eWsTt_ZRreUVI4qYVo9qEf3oW6uTfNw9CRY1jYTCn0ZZnRpVfNVdg63t_xl7DOoIg-oLdEF9x-PunMUq8EJ23IKTAlP_or8GEQae_zXh1u5IdM2HBzTttROpY9Zvsbj1D-4xmKRWHU5h4Tp0dnl6ORxYFIAqmqmHcsQ';\ncy.visit(loginUrl);\ncy.wait(4000);",
+              "err": {},
+              "uuid": "c008709e-33fa-4fdf-a917-41dd10ba0a94",
+              "parentUUID": "6ec8678a-27be-40cc-941d-8154b066d26f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "I can see Dashboard",
+              "fullTitle": "Student can login and see Dashboard I can see Dashboard",
+              "timedOut": null,
+              "duration": 26,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Dashboard');",
+              "err": {},
+              "uuid": "562bcc6f-1439-432b-86b0-8ec495ec2667",
+              "parentUUID": "6ec8678a-27be-40cc-941d-8154b066d26f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c008709e-33fa-4fdf-a917-41dd10ba0a94",
+            "562bcc6f-1439-432b-86b0-8ec495ec2667"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7344,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

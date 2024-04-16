@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-04-16T12:19:14.801Z",
+    "end": "2024-04-16T12:20:21.680Z",
+    "duration": 66879,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5e7b02db-4091-43c1-af05-34307c2549d2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\_CadetFunding\\CadetPaymentRequest\\cadetTuitionFeesCPR.cy.ts",
+      "file": "cypress\\e2e\\_CadetFunding\\CadetPaymentRequest\\cadetTuitionFeesCPR.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0c1bfb2f-f3b7-49ad-a83d-f77580445b83",
+          "title": "create CPR",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "I can log in, cancel old goals",
+              "fullTitle": "create CPR I can log in, cancel old goals",
+              "timedOut": null,
+              "duration": 10232,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('Cypress', 'Cadet-Buck');\ncy.wait(2000);\ncy.visit('/funding-request/all').wait(2000);\n// cy.contains('button',' Cancel ').click();\n//  cy.contains('button','Yes').click().wait(1000)",
+              "err": {},
+              "uuid": "6c14d878-f9cf-474a-9790-593330c7c22a",
+              "parentUUID": "0c1bfb2f-f3b7-49ad-a83d-f77580445b83",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "I can start the Tuition and Fees process",
+              "fullTitle": "create CPR I can start the Tuition and Fees process",
+              "timedOut": null,
+              "duration": 5603,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/funding-request/create/cadet-scholarship').wait(2000);\ncy.contains('mat-card', ' Cadet Tuition & Fees ').click().wait(2000);\ncy.contains('button', ' Next ').click().wait(1000);\n// cy.get('.mdc-checkbox').eq(0).click().wait(2000);\n// cy.getInputControl('campus').type('{downarrow}{enter}');\n// cy.contains('button',' Next ').eq(0).click().wait(2000);\n//  })\n// it('Can select term', () => {\n// cy.get('.termTitle').eq(0).click().wait(2000);\n// cy.contains(' Next ').click({force:true}).wait(2000);\n// cy.contains('Add Course').click();\n// cy.wait(2000);",
+              "err": {},
+              "uuid": "ae5cca44-d2a2-40cc-9a27-d989c4245937",
+              "parentUUID": "0c1bfb2f-f3b7-49ad-a83d-f77580445b83",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "I can select Academic School when Host is the same",
+              "fullTitle": "create CPR I can select Academic School when Host is the same",
+              "timedOut": null,
+              "duration": 17729,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Academic School').click().wait(2000);\ncy.get('#mat-mdc-checkbox-1-input').click().wait(2000);\ncy.get('#mat-input-1').type('{downarrow}{enter}');\ncy.get('#cdk-step-content-1-0 > .mat-vertical-content > .mat-stepper-next > .mat-mdc-button-touch-target').click({ force: true }).wait(2000);\ncy.get('[fxlayout=\"row wrap\"] > :nth-child(1) > .mat-mdc-card').click().wait(2000);\ncy.get('#cdk-step-content-1-1 > .mat-vertical-content > .mat-stepper-next > .mat-mdc-button-touch-target').click({ force: true }).wait(2000);\ncy.contains(' Add Course ').click().wait(2000);\ncy.wait(2000);\ncy.get('[id=addCourseBtn]').first().click();\ncy.getMatSelectControl('courseLocationId').click().get('mat-option').contains(' DL/Online ').click();\ncy.get('#mat-mdc-checkbox-3-input').click();\ncy.contains('Add Course').click();\ncy.wait(2000);",
+              "err": {},
+              "uuid": "19871b72-5b62-499c-a8e7-5ed08b60798a",
+              "parentUUID": "0c1bfb2f-f3b7-49ad-a83d-f77580445b83",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "can add tuition and fees cost",
+              "fullTitle": "create CPR can add tuition and fees cost",
+              "timedOut": null,
+              "duration": 23775,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.getInputControl('tuitionTotal').type('1000').wait(2000);\ncy.get('#cdk-step-label-1-3').click().wait(2000);\ncy.contains('button', ' Add Fees ').click().wait(1500);\ncy.getInputControl('title').click();\ncy.get('mat-option').contains(' Other ').click();\ncy.getInputControl('cost').type('200').wait(2000);\ncy.get('[formcontrolname=feeDescription]').type('Cypress Test').wait(2000);\ncy.contains('button', ' Add Fee ').click().wait(2000);\n//verify it can add second Other fee\ncy.contains('button', ' Add Fees ').click().wait(1000);\ncy.getInputControl('title').click();\ncy.get('mat-option').contains(' Other ').click();\ncy.getInputControl('cost').type('200').wait(2000);\ncy.get('[formcontrolname=feeDescription]').type('Cypress Test').wait(2000);\ncy.contains('button', ' Add Fee ').click().wait(2000);\nconst fixtureFile = 'CPRSupportingDoc.pdf';\ncy.get('input[type=\"file\"]').attachFile(fixtureFile).wait(2000);",
+              "err": {},
+              "uuid": "07e7e50e-30e1-43cf-924c-f0b863511179",
+              "parentUUID": "0c1bfb2f-f3b7-49ad-a83d-f77580445b83",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Can Skip Affiliate School and submit",
+              "fullTitle": "create CPR Can Skip Affiliate School and submit",
+              "timedOut": null,
+              "duration": 8601,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Affiliate School').click().wait(2000);\ncy.contains('button', ' Skip ').click().wait(2000);\ncy.contains('button', ' Submit ').click().wait(2000);\ncy.contains('Congratulations your Cadet Payment Request has been submitted and is awaiting approval!').wait(2000);\ncy.contains('button', ' FINISHED ').click();",
+              "err": {},
+              "uuid": "c6d5ab9c-8846-4a03-8324-4614f8bc4c6f",
+              "parentUUID": "0c1bfb2f-f3b7-49ad-a83d-f77580445b83",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cadre Can Approve CPR via API",
+              "fullTitle": "create CPR Cadre Can Approve CPR via API",
+              "timedOut": null,
+              "duration": 803,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.impersonateToken('3323715');\ncy.getFundingRequest('1945').then((response) => {\n    const fundingRequestID = response.body[0].id;\n    cy.PostFundingRequestStatus('1945', fundingRequestID, '35');\n});",
+              "err": {},
+              "uuid": "d4b15cd4-eab2-4fc9-907b-d47df70f7148",
+              "parentUUID": "0c1bfb2f-f3b7-49ad-a83d-f77580445b83",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6c14d878-f9cf-474a-9790-593330c7c22a",
+            "ae5cca44-d2a2-40cc-9a27-d989c4245937",
+            "19871b72-5b62-499c-a8e7-5ed08b60798a",
+            "07e7e50e-30e1-43cf-924c-f0b863511179",
+            "c6d5ab9c-8846-4a03-8324-4614f8bc4c6f",
+            "d4b15cd4-eab2-4fc9-907b-d47df70f7148"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 66743,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

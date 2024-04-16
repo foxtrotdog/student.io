@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-04-16T12:32:30.271Z",
+    "end": "2024-04-16T12:32:51.004Z",
+    "duration": 20733,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "017279ac-013e-4d8c-b4ba-72ecc872ef72",
+      "title": "",
+      "fullFile": "cypress\\e2e\\_CIVFunding\\General\\UserAccount\\CivStudentSelectsSupervisor.cy.ts",
+      "file": "cypress\\e2e\\_CIVFunding\\General\\UserAccount\\CivStudentSelectsSupervisor.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "05bc5e36-3eb5-4486-806d-65ba3f6286b3",
+          "title": "Student selects supervisor",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "I can log in, select my profile",
+              "fullTitle": "Student selects supervisor I can log in, select my profile",
+              "timedOut": null,
+              "duration": 12366,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('Cypress', 'Civ');\ncy.wait(2000);\ncy.visit('/account/profile').wait(2000);",
+              "err": {},
+              "uuid": "896fe43e-7589-4e51-ab9e-2d4ed2affd44",
+              "parentUUID": "05bc5e36-3eb5-4486-806d-65ba3f6286b3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "I can select supervisor",
+              "fullTitle": "Student selects supervisor I can select supervisor",
+              "timedOut": null,
+              "duration": 4248,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.getInputControl('supervisorList').clear().type('Nayla Civ').wait(1000);\ncy.contains(' Nayla Civilian, NH-12, W4CMAA, nm@bamtech.net ').click();\ncy.contains('button', 'Update Supervisor').click().wait(2000);\ncy.contains('Nayla');\ncy.contains('Civilian');",
+              "err": {},
+              "uuid": "ba1b0f93-5a21-4e35-9453-9baf3f6b85d4",
+              "parentUUID": "05bc5e36-3eb5-4486-806d-65ba3f6286b3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "I can set the supervisor back",
+              "fullTitle": "Student selects supervisor I can set the supervisor back",
+              "timedOut": null,
+              "duration": 4056,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.getInputControl('supervisorList').clear().type('JJ Civ').wait(1000);\ncy.contains(' JJ Middle8 Civ01, WL-10, W418AA, jeremiah.lee@bamtech.net ').click();\ncy.contains('button', 'Update Supervisor').click().wait(2000);\ncy.contains('JJ');\ncy.contains('Civ01');",
+              "err": {},
+              "uuid": "fe49b7a0-b285-4142-a330-63cdce1488ee",
+              "parentUUID": "05bc5e36-3eb5-4486-806d-65ba3f6286b3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "896fe43e-7589-4e51-ab9e-2d4ed2affd44",
+            "ba1b0f93-5a21-4e35-9453-9baf3f6b85d4",
+            "fe49b7a0-b285-4142-a330-63cdce1488ee"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20670,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
