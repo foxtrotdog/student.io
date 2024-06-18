@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2024-04-16T12:26:54.933Z",
-    "end": "2024-04-16T12:27:54.329Z",
-    "duration": 59396,
+    "start": "2024-06-12T12:50:29.687Z",
+    "end": "2024-06-12T12:51:29.525Z",
+    "duration": 59838,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "84e51f39-e49f-4fc2-ba7f-2352a01eb70e",
+      "uuid": "0bc0a5fb-b474-4e47-8745-0d55a3a04b99",
       "title": "",
       "fullFile": "cypress\\e2e\\Help-Desk\\Army_IgnitED_site_ticket.cy.ts",
       "file": "cypress\\e2e\\Help-Desk\\Army_IgnitED_site_ticket.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b17fb215-f787-4c5e-a10f-d8d147d9acc9",
+          "uuid": "60dc6d40-e1a3-4bc1-9578-c5dc79349402",
           "title": "Army IgnitED Site Ticket",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Logs in as ACTIVE SM student and create help desk ticket",
               "fullTitle": "Army IgnitED Site Ticket Logs in as ACTIVE SM student and create help desk ticket",
               "timedOut": null,
-              "duration": 27336,
+              "duration": 27870,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.login('Cypress', 'Student');\ncy.wait(3000);\ncy.contains('button', 'HELP').click().wait(2000);\ncy.contains('button', 'Add Ticket').click().wait(2000);\ncy.contains('button', 'Submit Ticket').last().click();\ncy.wait(3000);\ncy.get('mat-select').eq(0).click().wait(1000);\ncy.contains('My Profile').click().wait(500);\ncy.get('mat-select').eq(1).click().wait(500);\ncy.contains('Cannot Update Contact Information').click().wait(500);\ncy.get('mat-select').eq(2).click().wait(500);\ncy.contains('Low').click().wait(500);\ncy.get('[formcontrolname=description]').click().type('This is a test ticket');\ncy.get('button').contains('Submit Ticket').click().wait(2000);\ncy.contains('mat-card-title', 'My Profile');\ncy.contains('mat-card-subtitle', 'Cannot Update Contact Information');\ncy.contains('button', 'Delete').click().wait(2000);\ncy.contains('button', 'Yes').click().wait(2000);",
               "err": {},
-              "uuid": "efeab044-df29-4346-8879-da21b7f560a4",
-              "parentUUID": "b17fb215-f787-4c5e-a10f-d8d147d9acc9",
+              "uuid": "38f1c831-1dca-4bc7-932d-797242a42f49",
+              "parentUUID": "60dc6d40-e1a3-4bc1-9578-c5dc79349402",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Logs in as CADET student and create help desk ticket",
               "fullTitle": "Army IgnitED Site Ticket Logs in as CADET student and create help desk ticket",
               "timedOut": null,
-              "duration": 31985,
+              "duration": 31891,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "cy.login('Cypress', 'Cadet-Nursing');\ncy.wait(3000);\ncy.contains('button', 'HELP').click().wait(2000);\ncy.contains('button', 'Add Ticket').click().wait(2000);\ncy.contains('button', 'Submit Ticket').last().click().wait(2000);\ncy.wait(3000);\ncy.get('mat-select').eq(0).click().wait(2000);\ncy.contains('Report Broken Link').click().wait(2000);\ncy.get('mat-select').eq(1).click().wait(500);\ncy.contains('Broken Link (specify in remarks)').click().wait(500);\ncy.get('mat-select').eq(2).click().wait(500);\ncy.contains('Low').click().wait(500);\ncy.get('[formcontrolname=description]').click().type('This is a test ticket');\ncy.get('button').contains('Submit Ticket').click().wait(2000);\ncy.contains('mat-card-title', 'Report Broken Link');\ncy.contains('mat-card-subtitle', 'Broken Link (specify in remarks)');\ncy.contains('button', 'Delete').click().wait(2000);\ncy.contains('button', 'Yes').click().wait(2000);",
               "err": {},
-              "uuid": "a8e809f0-cc86-43e4-9139-384adc2ea750",
-              "parentUUID": "b17fb215-f787-4c5e-a10f-d8d147d9acc9",
+              "uuid": "f605911e-b9d4-40c8-8a41-e2aa039e21b5",
+              "parentUUID": "60dc6d40-e1a3-4bc1-9578-c5dc79349402",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "efeab044-df29-4346-8879-da21b7f560a4",
-            "a8e809f0-cc86-43e4-9139-384adc2ea750"
+            "38f1c831-1dca-4bc7-932d-797242a42f49",
+            "f605911e-b9d4-40c8-8a41-e2aa039e21b5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 59321,
+          "duration": 59761,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

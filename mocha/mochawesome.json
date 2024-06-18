@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-04-16T12:26:27.490Z",
-    "end": "2024-04-16T12:26:35.227Z",
-    "duration": 7737,
+    "start": "2024-06-12T12:50:00.806Z",
+    "end": "2024-06-12T12:50:08.605Z",
+    "duration": 7799,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "655e551a-491e-475b-bc44-701fd4649706",
+      "uuid": "9c3e2b6e-41c4-4f12-bcec-4df33aae1b1b",
       "title": "",
       "fullFile": "cypress\\e2e\\01-warmup.cy.ts",
       "file": "cypress\\e2e\\01-warmup.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d792e9b4-c04e-4b70-a408-4b48bc1beece",
+          "uuid": "782db4de-1efd-4797-8b0f-4b36a18c480a",
           "title": "First test to run to warm up server",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Generic test",
               "fullTitle": "First test to run to warm up server Generic test",
               "timedOut": null,
-              "duration": 7658,
+              "duration": 7760,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.login('Cypress', 'Active-Student');\ncy.wait(500);\ncy.contains('Messages').click();\ncy.wait(100);\ncy.contains('Funding Requests').click();\ncy.wait(100);\ncy.contains('Education Goals').click();",
               "err": {},
-              "uuid": "3763795b-8926-4bd4-aa77-0567a235a79e",
-              "parentUUID": "d792e9b4-c04e-4b70-a408-4b48bc1beece",
+              "uuid": "bccb8e19-072c-46a1-ad0f-af5f099ce237",
+              "parentUUID": "782db4de-1efd-4797-8b0f-4b36a18c480a",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3763795b-8926-4bd4-aa77-0567a235a79e"
+            "bccb8e19-072c-46a1-ad0f-af5f099ce237"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 7658,
+          "duration": 7760,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

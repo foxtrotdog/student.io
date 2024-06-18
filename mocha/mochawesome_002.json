@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2024-04-16T12:26:39.368Z",
-    "end": "2024-04-16T12:26:53.439Z",
-    "duration": 14071,
+    "start": "2024-06-12T12:50:13.932Z",
+    "end": "2024-06-12T12:50:28.233Z",
+    "duration": 14301,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "16aaa46c-e732-4c53-a2ba-922bce3e2f10",
+      "uuid": "4492cdc0-abdf-492e-8624-75fa102145ff",
       "title": "",
       "fullFile": "cypress\\e2e\\credentialing-assistance\\vendors-tab.cy.ts",
       "file": "cypress\\e2e\\credentialing-assistance\\vendors-tab.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "eadaa53d-a8a4-44dd-93f6-3fa01c9c2ddd",
+          "uuid": "ec4185e6-ac6a-4a4e-9644-bf17fb84dd59",
           "title": "Student can research possible vendors for a credential",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "I can navigate to Credentialing landing page",
               "fullTitle": "Student can research possible vendors for a credential I can navigate to Credentialing landing page",
               "timedOut": null,
-              "duration": 9303,
+              "duration": 9185,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.login('Cypress', 'Credentialing');\ncy.wait(500);\ncy.contains('Education Programs').click();\ncy.wait(2000);\ncy.contains('Credentialing Assistance').click();",
               "err": {},
-              "uuid": "adc2b341-9b96-4b9d-9b84-61da1cecc234",
-              "parentUUID": "eadaa53d-a8a4-44dd-93f6-3fa01c9c2ddd",
+              "uuid": "b8249c7f-258a-4d8d-9f61-a8fe2af8761c",
+              "parentUUID": "ec4185e6-ac6a-4a4e-9644-bf17fb84dd59",
               "isHook": false,
               "skipped": false
             },
@@ -56,30 +56,30 @@
               "title": "I can access Vendors tab",
               "fullTitle": "Student can research possible vendors for a credential I can access Vendors tab",
               "timedOut": null,
-              "duration": 4658,
+              "duration": 5012,
               "state": "passed",
-              "speed": "fast",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.contains(' MOS 12A ').click();\ncy.wait(4000);\ncy.contains('View').click();\ncy.contains('Vendors');",
               "err": {},
-              "uuid": "1b1ec5bd-331f-4099-9ccd-88498dde9b88",
-              "parentUUID": "eadaa53d-a8a4-44dd-93f6-3fa01c9c2ddd",
+              "uuid": "2c433919-0441-42f9-b5ab-b3af200778b3",
+              "parentUUID": "ec4185e6-ac6a-4a4e-9644-bf17fb84dd59",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "adc2b341-9b96-4b9d-9b84-61da1cecc234",
-            "1b1ec5bd-331f-4099-9ccd-88498dde9b88"
+            "b8249c7f-258a-4d8d-9f61-a8fe2af8761c",
+            "2c433919-0441-42f9-b5ab-b3af200778b3"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 13961,
+          "duration": 14197,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
